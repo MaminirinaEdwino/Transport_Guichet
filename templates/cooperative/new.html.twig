@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cooperative{% endblock %}
+
+{% block body %}
+    <h1>Create new Cooperative</h1>
+
+    {{ include('cooperative/_form.html.twig') }}
+
+    <a href="{{ path('app_cooperative_index') }}">back to list</a>
+{% endblock %}

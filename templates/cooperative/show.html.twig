@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cooperative{% endblock %}
+
+{% block body %}
+    <h1>Cooperative</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ cooperative.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ cooperative.nom }}</td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td>{{ cooperative.telephone }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cooperative_index') }}">back to list</a>
+
+    <a href="{{ path('app_cooperative_edit', {'id': cooperative.id}) }}">edit</a>
+
+    {{ include('cooperative/_delete_form.html.twig') }}
+{% endblock %}
